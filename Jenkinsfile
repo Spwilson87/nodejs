@@ -14,8 +14,9 @@ pipeline {
 
             }
         }
-        stage('clean workspace'){
+        stage('clean up'){
             steps {
+                sh "./docker-remove.sh"
                 cleanWs()
             }
         }
