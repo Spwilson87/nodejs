@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    environment {
-    SECRET_VAR = credentials('secret-text')
-}
+
 
     stages {
         stage('build'){
