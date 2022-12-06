@@ -1,8 +1,13 @@
 pipeline {
     agent any
+    environment {
+    SECRET_VAR = credentials('secret-text')
+}
+
     stages {
         stage('build'){
             steps {
+                sh "echo secret-text"
                 sh "chmod +x build.sh"
                 sh "./build.sh"
 
