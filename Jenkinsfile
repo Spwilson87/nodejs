@@ -10,7 +10,7 @@ pipeline {
         }
         stage('check'){
             steps {
-                sh "curl localhost:5000"
+                sh "curl localhost"
 
             }
         }
