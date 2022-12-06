@@ -16,6 +16,7 @@ pipeline {
         }
         stage('clean up'){
             steps {
+                sh "chmod +x docker-remove.sh"
                 sh "./docker-remove.sh"
                 cleanWs()
             }
